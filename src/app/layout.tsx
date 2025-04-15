@@ -55,6 +55,20 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
+    icons: {
+        icon: [
+            { url: "/favicon.ico", sizes: "any" },
+            { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
+            { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+        ],
+        apple: [
+            {
+                url: "/apple-touch-icon.png",
+                sizes: "180x180",
+                type: "image/png",
+            },
+        ],
+    },
 };
 
 export const viewport: Viewport = {
@@ -76,22 +90,22 @@ export default function RootLayout({
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
-                    href="/logo.jpeg"
+                    href="/apple-touch-icon.png"
                 />
                 <link
                     rel="icon"
-                    type="image/jpeg"
+                    type="image/png"
                     sizes="32x32"
-                    href="/logo.jpeg"
+                    href="/icon-32x32.png"
                 />
                 <link
                     rel="icon"
-                    type="image/jpeg"
+                    type="image/png"
                     sizes="16x16"
-                    href="/logo.jpeg"
+                    href="/icon-16x16.png"
                 />
                 <link rel="manifest" href="/manifest.json" />
-                <meta name="theme-color" content="#7c3aed" />
+                <link rel="shortcut icon" href="/favicon.ico" />
                 <meta name="format-detection" content="telephone=no" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
