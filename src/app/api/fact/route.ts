@@ -19,7 +19,7 @@ export async function GET(req: Request) {
         const date =
             searchParams.get("date") || new Date().toISOString().split("T")[0];
 
-        const [year, month, day] = date.split("-").map(Number);
+        const [, month, day] = date.split("-").map(Number);
 
         const facts: Fact[] = [];
 

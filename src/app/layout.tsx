@@ -1,7 +1,8 @@
 import "./globals.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://fact.codebyjaron.nl"),
     title: "Fact of the Day - Daily Interesting Facts",
     description:
         "Discover a new interesting fact every day! Get random facts about history, numbers, and more.",
@@ -56,15 +57,21 @@ export const metadata: Metadata = {
     },
 };
 
+export const viewport: Viewport = {
+    themeColor: "#7c3aed",
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+};
+
 export default function RootLayout({
     children,
-    params: { locale },
 }: {
     children: React.ReactNode;
-    params: { locale: string };
 }) {
     return (
-        <html lang={locale}>
+        <html lang="en">
             <head>
                 <link
                     rel="apple-touch-icon"

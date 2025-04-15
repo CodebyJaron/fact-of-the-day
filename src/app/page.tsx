@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { RefreshCw } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface Category {
     id: string;
@@ -29,7 +29,7 @@ export default function Home() {
     const [error, setError] = useState<string | null>(null);
     const [selectedCategory, setSelectedCategory] = useState("random");
 
-    const loadFact = async () => {
+    const loadFact = useCallback(async () => {
         setIsLoading(true);
         setError(null);
         try {
@@ -39,16 +39,16 @@ export default function Home() {
             }
             const json = await res.json();
             setCurrentFact(json);
-        } catch (error) {
+        } catch {
             setError("Failed to load fact. Please try again.");
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [selectedCategory]);
 
     useEffect(() => {
         loadFact();
-    }, [selectedCategory]);
+    }, [loadFact]);
 
     const getRandomFact = () => {
         loadFact();
