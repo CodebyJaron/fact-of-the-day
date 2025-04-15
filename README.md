@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fact of the Day
+
+A modern, accessible, and SEO-optimized web application that delivers
+interesting facts daily. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+-   �� Daily random facts from
+    [Useless Facts API](https://uselessfacts.jsph.pl/)
+-   📜 Historical facts from [On This Day API](https://byabbe.se/on-this-day/)
+-   🔢 Number facts from [Numbers API](http://numbersapi.com/)
+-   📱 PWA support (installable on mobile devices)
+-   🌙 Dark mode support
+-   ♿️ 100% accessibility score
+-   🔍 SEO optimized
+-   🚀 Fast performance
+
+## Tech Stack
+
+-   [Next.js](https://nextjs.org/) - React framework
+-   [TypeScript](https://www.typescriptlang.org/) - Type safety
+-   [Tailwind CSS](https://tailwindcss.com/) - Styling
+-   [Framer Motion](https://www.framer.com/motion/) - Animations
+-   [Lucide Icons](https://lucide.dev/) - Icons
+-   [Vercel](https://vercel.com/) - Hosting & Deployment
+
+## APIs Used
+
+### Useless Facts API
+
+-   Endpoint: `https://uselessfacts.jsph.pl/random.json`
+-   Provides random interesting facts
+-   Used for the "Random" category
+
+### On This Day API
+
+-   Endpoint: `https://byabbe.se/on-this-day/{month}/{day}/events.json`
+-   Provides historical events for specific dates
+-   Used for the "History" category
+
+### Numbers API
+
+-   Endpoint: `http://numbersapi.com/{number}`
+-   Provides interesting facts about numbers
+-   Used for the "Numbers" category
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+-   Node.js 18.0 or later
+-   npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/codebyjaron/fact-of-the-day.git
+cd fact-of-the-day
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+# or
+yarn build
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The application is deployed on Vercel at
+[fact.codebyjaron.nl](https://fact.codebyjaron.nl):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Deploy!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## SEO & Performance
 
-## Deploy on Vercel
+-   Optimized metadata for search engines
+-   Proper OpenGraph tags for social sharing
+-   Sitemap and robots.txt for search engine crawling
+-   High performance score on Google PageSpeed Insights
+-   100% accessibility score
+-   Proper PWA configuration with manifest.json
+-   Responsive design for all devices
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## PWA Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   Installable on mobile devices
+-   Works offline
+-   Fast loading times
+-   Proper icon support for all platforms
+-   Theme color integration
+-   Proper viewport settings for accessibility
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
+
+## Acknowledgments
+
+-   [Useless Facts API](https://uselessfacts.jsph.pl/) for random facts
+-   [On This Day API](https://byabbe.se/on-this-day/) for historical facts
+-   [Numbers API](http://numbersapi.com/) for number facts
+-   Next.js team for the amazing framework
+-   Tailwind CSS for the utility-first CSS framework
+-   Vercel for hosting and deployment
